@@ -11,4 +11,8 @@ Code for the internship @The University of Sheffield.
 
 If you are stucked in the _.py files_ please refer to the corresponding _notebooks_
 
+## Requirements for python libraries:
+* data_generator.py :
+  * os, pandas, numpy, gzip, shutil
+
 
