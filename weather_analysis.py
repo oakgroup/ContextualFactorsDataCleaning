@@ -11,12 +11,14 @@ class CleanerExtractor():
     def __init__(
             self,
             path: str,
+            folder_path: str,
             threshold: float
             ) -> None:
 
         # path for csv file that has: 
         # timestamp, patient, day, cohort, step per sec, indoor prob        
-        self.path = path
+        self.data_path = path
+        self.folder_path = folder_path
         self.threshold = threshold
         self.df = pd.DataFrame([])
         
@@ -29,7 +31,7 @@ class CleanerExtractor():
 
 
     def _load_dataframe(self):
-        self.df = pd.read_csv(self.path)
+        self.df = pd.read_csv(self.data_path)
 
         #we are just interested in outdoor envs
         self.df.drop(self.df[self.df.IndoorProb != 100].index, inplace=True)
@@ -60,9 +62,9 @@ class CleanerExtractor():
         non_valid_stats = []
         
         num_days = list(range(1,8))
-        for f in os.listdir(self.path):
+        for f in os.listdir(self.folder_path):
             if f.startswith('weather') and f.endswith('.json'):
-                w_file = pd.read_json(os.path.join(self.path, f))
+                w_file = pd.read_json(os.path.join(self.folder_path, f))
 
                 # we remove every seen day
                 day = f.split('-')[3]

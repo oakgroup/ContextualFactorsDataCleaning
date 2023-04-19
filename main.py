@@ -2,9 +2,9 @@ from weather_analysis import CleanerExtractor
 import argparse
 
 def main(args):
-    path = args.path
-    threshold = args.threshold
-    output_path = args.output
+    path = args.path # e.g., 'full_df.csv'
+    threshold = args.threshold # e.g., 0.5
+    output_path = args.output # e.g., 'weather_analysis_05_thresh.csv'
 
     cleaner = CleanerExtractor(path, threshold)
     cleaner.fit()
