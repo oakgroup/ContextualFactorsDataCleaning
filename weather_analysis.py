@@ -1,6 +1,4 @@
 import os
-import gzip
-from tqdm import tqdm
 import pandas as pd
 import numpy as np
 from scipy.stats import trim_mean, iqr
