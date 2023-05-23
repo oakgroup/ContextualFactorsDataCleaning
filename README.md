@@ -15,4 +15,9 @@ If you are stucked in the _.py files_ please refer to the corresponding _noteboo
 * data_generator.py :
   * os, pandas, numpy, gzip, shutil
 
+## Data
+The data to be processed can be found on [GDrive](https://drive.google.com/drive/folders/14wI-6fR1POVeB2ua8qP1nlLnwliEY5pW?usp=share_link)
+
+## Usage
+TBD
 
