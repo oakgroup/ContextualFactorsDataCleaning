@@ -18,6 +18,20 @@ If you are stucked in the _.py files_ please refer to the corresponding _noteboo
 ## Data
 The data to be processed can be found on [GDrive](https://drive.google.com/drive/folders/14wI-6fR1POVeB2ua8qP1nlLnwliEY5pW?usp=share_link)
 
+In the ContextualFactorsData folder there are subfolders for the major data versions (currently only v1 has data). 
+
+Within these folders the data files are tarred, gzipped and encrypted.
+
+To extract data…
+
+"openssl enc -d -aes-256-cbc -pbkdf2 -salt -in mobilised-contextual-factors-v1.tgz.enc"
+At this point you will need the password from [@neilireson](https://github.com/neilireson)
+
+Then "tar -zxf mobilised-contextual-factors-v1.tgz"
+This will extract the CF data, one folder per user.
+
+DO NOT DISTRIBUTED THIS DATA
+
 ## Usage
 TBD
 
