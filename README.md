@@ -24,7 +24,7 @@ Within these folders the data files are tarred, gzipped and encrypted.
 
 To extract data…
 
-"openssl enc -d -aes-256-cbc -pbkdf2 -salt -in mobilised-contextual-factors-v1.tgz.enc"
+"openssl enc -d -aes-256-cbc -pbkdf2 -salt -in mobilised-contextual-factors-v1.tgz.enc > mobilised-contextual-factors-v1.tgz"
 
 At this point you will need the password from [@neilireson](https://github.com/neilireson)
 
